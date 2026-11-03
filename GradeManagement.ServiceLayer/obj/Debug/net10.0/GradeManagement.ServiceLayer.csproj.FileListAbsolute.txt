@@ -15,3 +15,4 @@
 /Users/jiggyg/Documents/GradeManagement/GradeManagement.ServiceLayer/obj/Debug/net10.0/refint/GradeManagement.ServiceLayer.dll
 /Users/jiggyg/Documents/GradeManagement/GradeManagement.ServiceLayer/obj/Debug/net10.0/GradeManagement.ServiceLayer.pdb
 /Users/jiggyg/Documents/GradeManagement/GradeManagement.ServiceLayer/obj/Debug/net10.0/ref/GradeManagement.ServiceLayer.dll
+/Users/jiggyg/Documents/GradeManagement/GradeManagement.ServiceLayer/obj/Debug/net10.0/GradeManagement.ServiceLayer.sourcelink.json

@@ -18,6 +18,7 @@ public class Program
         // Learn more about configuring OpenAPI at https://aka.ms/aspnet/openapi
         builder.Services.AddOpenApi();
         builder.Services.AddScoped<CourseService, CourseService>();
+        builder.Services.AddScoped<UserService, UserService>();
         builder.Services.AddServiceLayer(builder.Configuration); 
         builder.Services.AddEndpointsApiExplorer();
     builder.Services.AddSwaggerGen(options =>

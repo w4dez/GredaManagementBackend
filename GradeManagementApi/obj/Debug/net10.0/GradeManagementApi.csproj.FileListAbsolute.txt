@@ -54,3 +54,4 @@
 /Users/jiggyg/Documents/GradeManagement/GradeManagementApi/obj/Debug/net10.0/GradeManagementApi.pdb
 /Users/jiggyg/Documents/GradeManagement/GradeManagementApi/obj/Debug/net10.0/GradeManagementApi.genruntimeconfig.cache
 /Users/jiggyg/Documents/GradeManagement/GradeManagementApi/obj/Debug/net10.0/ref/GradeManagementApi.dll
+/Users/jiggyg/Documents/GradeManagement/GradeManagementApi/obj/Debug/net10.0/GradeManagementApi.sourcelink.json

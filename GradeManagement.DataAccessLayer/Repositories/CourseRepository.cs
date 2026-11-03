@@ -27,7 +27,7 @@ public class CourseRepository : ICourseRepository
     /// </summary>
     /// <param name="id"></param>
     /// <returns></returns>
-    public Course? GetById(int id)
+    public Course GetById(int id)
     {   
         return _context.Courses.FirstOrDefault(c => c.Id == id);  
     }
@@ -36,7 +36,7 @@ public class CourseRepository : ICourseRepository
     /// </summary>
     /// <param name="name"></param>
     /// <returns></returns>
-    public Course? GetByName(string name)
+    public Course GetByName(string name)
     {
         return _context.Courses.FirstOrDefault(c => c.Name == name);
     }
@@ -45,7 +45,7 @@ public class CourseRepository : ICourseRepository
     /// </summary>
     /// <param name="acronym"></param>
     /// <returns></returns>
-    public Course? GetByAcronym(string acronym)
+    public Course GetByAcronym(string acronym)
     {
         return _context.Courses.FirstOrDefault(c => c.Acronym == acronym);
     }

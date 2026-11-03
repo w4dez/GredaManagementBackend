@@ -11,6 +11,7 @@ public static class DependencyInjection
         services.AddDataAccessLayer(configuration); 
 
         services.AddScoped<CourseService>();
+        services.AddScoped<UserService>();
         return services;
     }
 }

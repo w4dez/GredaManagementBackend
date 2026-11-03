@@ -24,8 +24,14 @@ public static class DependencyInjection
             options.UseMySql(connectionString,
                 ServerVersion.AutoDetect(connectionString));
         });
+                services.AddDbContext<UsersContext>(options =>
+        {
+            options.UseMySql(connectionString,
+                ServerVersion.AutoDetect(connectionString));
+        });
 
         services.AddScoped<ICourseRepository, CourseRepository>();
+        services.AddScoped<IUserRepository, userRepository>();
         return services;
     }
 }

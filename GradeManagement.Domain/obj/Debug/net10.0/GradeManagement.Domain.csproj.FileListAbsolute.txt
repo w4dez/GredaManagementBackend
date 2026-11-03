@@ -1,0 +1,11 @@
+/Users/jiggyg/Documents/GradeManagement/GradeManagement.Domain/bin/Debug/net10.0/GradeManagement.Domain.deps.json
+/Users/jiggyg/Documents/GradeManagement/GradeManagement.Domain/bin/Debug/net10.0/GradeManagement.Domain.dll
+/Users/jiggyg/Documents/GradeManagement/GradeManagement.Domain/bin/Debug/net10.0/GradeManagement.Domain.pdb
+/Users/jiggyg/Documents/GradeManagement/GradeManagement.Domain/obj/Debug/net10.0/GradeManagement.Domain.GeneratedMSBuildEditorConfig.editorconfig
+/Users/jiggyg/Documents/GradeManagement/GradeManagement.Domain/obj/Debug/net10.0/GradeManagement.Domain.AssemblyInfoInputs.cache
+/Users/jiggyg/Documents/GradeManagement/GradeManagement.Domain/obj/Debug/net10.0/GradeManagement.Domain.AssemblyInfo.cs
+/Users/jiggyg/Documents/GradeManagement/GradeManagement.Domain/obj/Debug/net10.0/GradeManagement.Domain.csproj.CoreCompileInputs.cache
+/Users/jiggyg/Documents/GradeManagement/GradeManagement.Domain/obj/Debug/net10.0/GradeManagement.Domain.dll
+/Users/jiggyg/Documents/GradeManagement/GradeManagement.Domain/obj/Debug/net10.0/refint/GradeManagement.Domain.dll
+/Users/jiggyg/Documents/GradeManagement/GradeManagement.Domain/obj/Debug/net10.0/GradeManagement.Domain.pdb
+/Users/jiggyg/Documents/GradeManagement/GradeManagement.Domain/obj/Debug/net10.0/ref/GradeManagement.Domain.dll

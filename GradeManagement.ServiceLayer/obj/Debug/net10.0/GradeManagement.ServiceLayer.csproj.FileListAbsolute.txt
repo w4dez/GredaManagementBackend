@@ -1,0 +1,17 @@
+/Users/jiggyg/Documents/GradeManagement/GradeManagement.ServiceLayer/bin/Debug/net10.0/GradeManagement.ServiceLayer.deps.json
+/Users/jiggyg/Documents/GradeManagement/GradeManagement.ServiceLayer/bin/Debug/net10.0/GradeManagement.ServiceLayer.dll
+/Users/jiggyg/Documents/GradeManagement/GradeManagement.ServiceLayer/bin/Debug/net10.0/GradeManagement.ServiceLayer.pdb
+/Users/jiggyg/Documents/GradeManagement/GradeManagement.ServiceLayer/bin/Debug/net10.0/GradeManagement.DataAccessLayer.dll
+/Users/jiggyg/Documents/GradeManagement/GradeManagement.ServiceLayer/bin/Debug/net10.0/GradeManagement.Domain.dll
+/Users/jiggyg/Documents/GradeManagement/GradeManagement.ServiceLayer/bin/Debug/net10.0/GradeManagement.DataAccessLayer.pdb
+/Users/jiggyg/Documents/GradeManagement/GradeManagement.ServiceLayer/bin/Debug/net10.0/GradeManagement.Domain.pdb
+/Users/jiggyg/Documents/GradeManagement/GradeManagement.ServiceLayer/obj/Debug/net10.0/GradeManagement.ServiceLayer.csproj.AssemblyReference.cache
+/Users/jiggyg/Documents/GradeManagement/GradeManagement.ServiceLayer/obj/Debug/net10.0/GradeManagement.ServiceLayer.GeneratedMSBuildEditorConfig.editorconfig
+/Users/jiggyg/Documents/GradeManagement/GradeManagement.ServiceLayer/obj/Debug/net10.0/GradeManagement.ServiceLayer.AssemblyInfoInputs.cache
+/Users/jiggyg/Documents/GradeManagement/GradeManagement.ServiceLayer/obj/Debug/net10.0/GradeManagement.ServiceLayer.AssemblyInfo.cs
+/Users/jiggyg/Documents/GradeManagement/GradeManagement.ServiceLayer/obj/Debug/net10.0/GradeManagement.ServiceLayer.csproj.CoreCompileInputs.cache
+/Users/jiggyg/Documents/GradeManagement/GradeManagement.ServiceLayer/obj/Debug/net10.0/GradeMan.517E9BFE.Up2Date
+/Users/jiggyg/Documents/GradeManagement/GradeManagement.ServiceLayer/obj/Debug/net10.0/GradeManagement.ServiceLayer.dll
+/Users/jiggyg/Documents/GradeManagement/GradeManagement.ServiceLayer/obj/Debug/net10.0/refint/GradeManagement.ServiceLayer.dll
+/Users/jiggyg/Documents/GradeManagement/GradeManagement.ServiceLayer/obj/Debug/net10.0/GradeManagement.ServiceLayer.pdb
+/Users/jiggyg/Documents/GradeManagement/GradeManagement.ServiceLayer/obj/Debug/net10.0/ref/GradeManagement.ServiceLayer.dll

@@ -4,12 +4,18 @@ using GradeManagement.Domain;
 public class CourseService : ICourseService
 {
     private readonly ICourseRepository _CourseRepository;
-
+    /// <summary>
+    /// 
+    /// </summary>
+    /// <param name="courseRepository"></param>
     public CourseService(ICourseRepository courseRepository)
     {
         _CourseRepository = courseRepository;
     }
-
+    /// <summary>
+    /// 
+    /// </summary>
+    /// <returns></returns>
     public List <CourseDto> GetAll()
     {
         var courses = _CourseRepository.GetAll();
@@ -20,7 +26,11 @@ public class CourseService : ICourseService
             Acronym = c.Acronym
         }).ToList();
     }
-
+    /// <summary>
+    /// 
+    /// </summary>
+    /// <param name="id"></param>
+    /// <returns></returns>
     public CourseDto GetById(int id)
     {
         var course = _CourseRepository.GetById(id);
@@ -35,7 +45,11 @@ public class CourseService : ICourseService
         Acronym = course.Acronym
     };
     }
-
+    /// <summary>
+    /// 
+    /// </summary>
+    /// <param name="name"></param>
+    /// <returns></returns>
     public CourseDto GetByName(string name)
     {
         var course = _CourseRepository.GetByName(name);
@@ -49,7 +63,11 @@ public class CourseService : ICourseService
             Acronym = course.Acronym
         };
     }
-
+    /// <summary>
+    /// 
+    /// </summary>
+    /// <param name="acronym"></param>
+    /// <returns></returns>
     public CourseDto GetByAcronym(string acronym)
     {
         var course = _CourseRepository.GetByAcronym(acronym);
@@ -63,7 +81,11 @@ public class CourseService : ICourseService
             Acronym = course.Acronym
         };
     }
-
+    /// <summary>
+    /// 
+    /// </summary>
+    /// <param name="createCourseDto"></param>
+    /// <returns></returns>
     public CourseDto CreateCourse(CreateCourseDto createCourseDto)
     {
         var newCourseEntity = new Course
@@ -80,7 +102,12 @@ public class CourseService : ICourseService
             Acronym = createdCourse.Acronym
         };   
     }
-
+    /// <summary>
+    /// 
+    /// </summary>
+    /// <param name="id"></param>
+    /// <param name="updateCourseDto"></param>
+    /// <returns></returns>
     public bool UpdateCourse(int id, UpdateCourseDto updateCourseDto)
     {
         var courseEntity = new Course
@@ -92,6 +119,11 @@ public class CourseService : ICourseService
 
         return _CourseRepository.UpdateCourse(id, courseEntity);
     }
+    /// <summary>
+    /// 
+    /// </summary>
+    /// <param name="id"></param>
+    /// <returns></returns>
     public bool DeleteCourse(int id)
     {
         return _CourseRepository.DeleteCourse(id);

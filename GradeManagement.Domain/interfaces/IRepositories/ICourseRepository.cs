@@ -1,7 +1,7 @@
 namespace GradeManagement.Domain;
 
 public interface ICourseRepository
-{
+{   
     public List<Course> GetAll();
     public Course GetById(int id);
     public Course GetByName(string name);

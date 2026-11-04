@@ -1,5 +1,8 @@
 namespace GradeManagement.Domain;
 
+/// <summary>
+/// 
+/// </summary>
 public class CreateUserDto
 {
     public required string Email {get; set;} = string.Empty;

@@ -1,11 +1,14 @@
 using GradeManagement.Domain;
 using GradeManagement.ServiceLayer;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Authorization;
+
 
 namespace GreadeManagementApi.Controllers;
 
 [ApiController]
 [Route("api/[controller]")]
+[Authorize]
 public class UserController : ControllerBase
 {
     private readonly UserService _userService;

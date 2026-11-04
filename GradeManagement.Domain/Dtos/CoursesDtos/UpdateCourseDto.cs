@@ -1,5 +1,8 @@
 namespace GradeManagement.Domain;
 
+/// <summary>
+/// 
+/// </summary>
 public class UpdateCourseDto
 {
     public required string Name {get; set;} = string.Empty;

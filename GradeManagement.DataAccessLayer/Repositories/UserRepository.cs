@@ -69,7 +69,7 @@ public class userRepository : IUserRepository
     /// <returns></returns>
     public bool UpdateUser(int id, User user)
      {
-        var userToUpdate = _context.User.FirstOrDefault(u => u.Id == id);  
+        User userToUpdate = _context.User.FirstOrDefault(u => u.Id == id);  
         if (userToUpdate == null) return false;
         userToUpdate.Email = user.Email;
         userToUpdate.FirstName = user.FirstName;
@@ -80,7 +80,7 @@ public class userRepository : IUserRepository
     }
     public bool DeleteUser (int id)
     {
-        var userToDelete = _context.User.FirstOrDefault(u => u.Id == id);  
+        User userToDelete = _context.User.FirstOrDefault(u => u.Id == id);  
         if (userToDelete == null) return false;
 
         _context.User.Remove(userToDelete);

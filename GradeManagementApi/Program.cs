@@ -19,10 +19,69 @@ public class Program
         builder.Services.AddOpenApi();
         builder.Services.AddScoped<CourseService, CourseService>();
         builder.Services.AddScoped<UserService, UserService>();
+        builder.Services.AddScoped<GradeService, GradeService>();
+        builder.Services.AddScoped<AuthService, AuthService>();
         builder.Services.AddServiceLayer(builder.Configuration); 
-        builder.Services.AddEndpointsApiExplorer();
+        builder.Services.AddAuthorization();
+        builder.Services.AddAuthentication(options =>
+{
+    options.DefaultAuthenticateScheme =
+        JwtBearerDefaults.AuthenticationScheme;
+    options.DefaultChallengeScheme =
+        JwtBearerDefaults.AuthenticationScheme;
+})
+.AddJwtBearer(options =>
+{
+    options.Events = new JwtBearerEvents
+    {
+        OnAuthenticationFailed = context =>
+        {
+            if (context.Exception.GetType() == typeof(SecurityTokenExpiredException))
+            {
+                context.Response.Headers.Add("Token-Expired", "true");
+            }
+            return Task.CompletedTask;
+        }
+    };
+    // Here we configure HOW a token should be validated
+    options.TokenValidationParameters = new TokenValidationParameters
+    {
+        ValidateIssuer = true,
+        ValidateAudience = true,
+        ValidateLifetime = true,
+        ValidateIssuerSigningKey = true,
+
+        // The values are read from the appsettings.json
+        ValidIssuer = builder.Configuration["Jwt:Issuer"],
+        ValidAudience = builder.Configuration["Jwt:Audience"],
+        IssuerSigningKey = new SymmetricSecurityKey(
+            Encoding.UTF8.GetBytes(builder.Configuration["Jwt:Key"]
+                ?? throw new InvalidOperationException("JWT Key is not configured.")))
+    };
+});
     builder.Services.AddSwaggerGen(options =>
 {
+
+    // 1. Definition für den Bearer-Token festlegen
+    options.AddSecurityDefinition("Bearer", new OpenApiSecurityScheme
+    {
+        Name = "Authorization",
+        Type = SecuritySchemeType.Http,
+        Scheme = "Bearer",
+        BearerFormat = "JWT",
+        In = ParameterLocation.Header,
+        Description = "Gib deinen JWT-Token direkt ein (ohne das Wort 'Bearer' davor)."
+    });
+
+    // 2. Sicherheitsanforderung auf alle Endpunkte anwenden
+    options.AddSecurityRequirement(document => new OpenApiSecurityRequirement
+            {
+                {
+                    new OpenApiSecuritySchemeReference("Bearer", document),
+                    new List<string>()
+                }
+            });
+
     options.SwaggerDoc("v1", new OpenApiInfo
     {
         Title = "GradeManagement API",

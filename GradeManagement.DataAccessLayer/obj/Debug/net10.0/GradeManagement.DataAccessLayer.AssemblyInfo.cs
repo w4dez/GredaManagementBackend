@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("GradeManagement.DataAccessLayer")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+a632713971ecddc2fceafe674f54f46a15a58768")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+4039f84641e48d2ea690964b81f325f561ab1356")]
 [assembly: System.Reflection.AssemblyProductAttribute("GradeManagement.DataAccessLayer")]
 [assembly: System.Reflection.AssemblyTitleAttribute("GradeManagement.DataAccessLayer")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

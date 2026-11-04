@@ -1,11 +1,16 @@
 using GradeManagement.Domain;
 using GradeManagement.ServiceLayer;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace GreadeManagementApi.Controllers;
 
 [ApiController]
 [Route("api/[controller]")]
+[Authorize]
+/// <summary>
+/// 
+/// </summary>
 public class CourseController : ControllerBase
 {
     private readonly CourseService _courseService;

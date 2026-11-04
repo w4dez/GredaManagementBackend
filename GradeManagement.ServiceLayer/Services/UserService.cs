@@ -20,7 +20,7 @@ public class UserService : IUserService
     /// <returns></returns>
     public List <UserDto> GetAll()
     {
-       var users = _UserRepository.GetAll();
+       List<User> users = _UserRepository.GetAll();
        return users.Select(u => new UserDto
        {
            Id = u.Id,
@@ -37,7 +37,7 @@ public class UserService : IUserService
     /// <returns></returns>
     public UserDto? GetById(int id)
     {
-        var user = _UserRepository.GetById(id);
+        User user = _UserRepository.GetById(id);
         if (user == null)
         {
             throw new Exception($"User with id {id} not found");  
@@ -57,7 +57,7 @@ public class UserService : IUserService
     /// <returns></returns>
     public UserDto? GetByEmail(string email)
     {
-        var user = _UserRepository.GetByEmail(email);
+        User user = _UserRepository.GetByEmail(email);
         if (user == null)
         {
             throw new Exception($"User with email {email} not found");  
@@ -70,9 +70,14 @@ public class UserService : IUserService
            LastName = user.LastName
     };
     }
+    /// <summary>
+    /// 
+    /// </summary>
+    /// <param name="name"></param>
+    /// <returns></returns>
     public UserDto? GetByName(string name)
     {
-        var user = _UserRepository.GetByName(name);
+        User user = _UserRepository.GetByName(name);
         if (user == null)
         {
             throw new Exception($"User with name {name} not found");  
@@ -85,15 +90,20 @@ public class UserService : IUserService
            LastName = user.LastName
     };
     }
+    /// <summary>
+    /// 
+    /// </summary>
+    /// <param name="createUserDto"></param>
+    /// <returns></returns>
     public UserDto CreateUser(CreateUserDto createUserDto)
     {
-        var newUserEntity = new User
+        User newUserEntity = new User
         {
             Email = createUserDto.Email,
             FirstName = createUserDto.FirstName,
             LastName = createUserDto.LastName
         };
-        var createdUser = _UserRepository.CreateUser(newUserEntity);
+        User createdUser = _UserRepository.CreateUser(newUserEntity);
   
         return new UserDto
         {   
@@ -103,9 +113,15 @@ public class UserService : IUserService
             LastName = createdUser.LastName
         };  
     }
+    /// <summary>
+    /// 
+    /// </summary>
+    /// <param name="id"></param>
+    /// <param name="updateUserDto"></param>
+    /// <returns></returns>
     public bool UpdateUser(int id, UpdateUserDto updateUserDto)
     {
-        var userEntity = new User
+        User userEntity = new User
         {
             Id = id,
             Email = updateUserDto.Email,
@@ -116,6 +132,11 @@ public class UserService : IUserService
         return _UserRepository.UpdateUser(id, userEntity);        
         
     }
+    /// <summary>
+    /// 
+    /// </summary>
+    /// <param name="id"></param>
+    /// <returns></returns>
     public bool DeleteUser(int id)
     {
         return _UserRepository.DeleteUser(id);

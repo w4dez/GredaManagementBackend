@@ -1,5 +1,8 @@
 namespace GradeManagement.Domain;
 
+/// <summary>
+/// 
+/// </summary>
 public class GradeDto
 {
     public int Id {get;set;}
@@ -10,6 +13,7 @@ public class GradeDto
 
     public int UserId {get; set;}
     public int CourseId {get; set;}
-    public string CourseName { get; set; } = string.Empty;
-    public string CourseAcronym { get; set; } = string.Empty;
+    public string CourseName { get; set; } = string.Empty; 
+
+
 }

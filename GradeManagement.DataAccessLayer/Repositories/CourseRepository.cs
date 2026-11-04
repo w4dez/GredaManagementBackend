@@ -1,6 +1,10 @@
 namespace GradeManagement.DataAccresssLayer;
+using Microsoft.EntityFrameworkCore;
 using GradeManagement.Domain;
 
+/// <summary>
+/// 
+/// </summary>
 public class CourseRepository : ICourseRepository
 {
     private readonly CoursesContext _context;
@@ -10,7 +14,7 @@ public class CourseRepository : ICourseRepository
     /// </summary>
     /// <param name="context"></param>
     public CourseRepository(CoursesContext context)
-    {
+    {   
         _context = context;
     }
 
@@ -20,7 +24,7 @@ public class CourseRepository : ICourseRepository
     /// <returns></returns>
     public List<Course> GetAll()
     {
-        return _context.Courses.ToList();
+        return _context.Course.Include(c => c.Grades).ToList();
     }
     /// <summary>
     ///     
@@ -28,8 +32,8 @@ public class CourseRepository : ICourseRepository
     /// <param name="id"></param>
     /// <returns></returns>
     public Course GetById(int id)
-    {   
-        return _context.Courses.FirstOrDefault(c => c.Id == id);  
+    {       
+        return _context.Course.Include(c => c.Grades).FirstOrDefault(c => c.Id == id);  
     }
     /// <summary>
     ///     
@@ -38,7 +42,7 @@ public class CourseRepository : ICourseRepository
     /// <returns></returns>
     public Course GetByName(string name)
     {
-        return _context.Courses.FirstOrDefault(c => c.Name == name);
+        return _context.Course.Include(c => c.Grades).FirstOrDefault(c => c.Name == name);
     }
     /// <summary>
     ///     
@@ -47,7 +51,7 @@ public class CourseRepository : ICourseRepository
     /// <returns></returns>
     public Course GetByAcronym(string acronym)
     {
-        return _context.Courses.FirstOrDefault(c => c.Acronym == acronym);
+        return _context.Course.Include(c => c.Grades).FirstOrDefault(c => c.Acronym == acronym);
     }
     /// <summary>
     /// 
@@ -56,7 +60,7 @@ public class CourseRepository : ICourseRepository
     /// <returns></returns>
     public Course CreateCourse(Course course)
     {
-        _context.Courses.Add(course);
+        _context.Course.Add(course);
         _context.SaveChanges();
         return course;
     }
@@ -68,7 +72,7 @@ public class CourseRepository : ICourseRepository
     /// <returns></returns>
     public bool UpdateCourse(int id, Course course)
     {
-        var courseToUpdate = _context.Courses.FirstOrDefault(c => c.Id == id);  
+        Course courseToUpdate = _context.Course.FirstOrDefault(c => c.Id == id);  
         if (courseToUpdate == null) return false;
         courseToUpdate.Name = course.Name;
         courseToUpdate.Acronym = course.Acronym;
@@ -82,10 +86,10 @@ public class CourseRepository : ICourseRepository
     /// <returns></returns>
     public bool DeleteCourse(int id)
     {
-        var courseToDelete = _context.Courses.FirstOrDefault(c => c.Id == id);  
+        Course courseToDelete = _context.Course.FirstOrDefault(c => c.Id == id);  
         if (courseToDelete == null) return false;
 
-        _context.Courses.Remove(courseToDelete);
+        _context.Course.Remove(courseToDelete);
         _context.SaveChanges();
         return true;
     }

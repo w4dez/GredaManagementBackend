@@ -1,5 +1,8 @@
 namespace GradeManagement.Domain;
 
+/// <summary>
+/// 
+/// </summary>
 public class UserDto
 {
     public int Id {get;set;}

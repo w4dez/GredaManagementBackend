@@ -1,5 +1,8 @@
 namespace GradeManagement.Domain;
 
+/// <summary>
+/// 
+/// </summary>
 public class UpdateGradeDto
 {
     public decimal GradeValue {get; set;}
